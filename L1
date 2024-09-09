@@ -1,0 +1,28 @@
+fun nok-to-USD(nok-amount :: Number)-> Number:
+  doc: "Convert NOK to USD using a fixed exchange rate"
+  nok-amount * 0.09 # Eksempel på en fast valutakurs, 1 NOK = 0.09 USD
+where:
+  nok-to-USD(10) is 10 * 0.09
+  nok-to-USD(100) is 100 * 0.09
+  nok-to-USD(500) is 500 * 0.09
+end
+
+# Funksjon som konverterer NOK til EUR
+fun nok-to-EUR(nok-amount :: Number)-> Number:
+  doc: "Convert NOK to EUR using a fixed exchange rate"
+  nok-amount * 0.08 # Eksempel på en fast valutakurs, 1 NOK = 0.08 EUR
+where:
+  nok-to-EUR(10) is 10 * 0.08
+  nok-to-EUR(100) is 100 * 0.08
+  nok-to-EUR(500) is 500 * 0.08
+end
+
+# Kombinert funksjon for å velge valuta (EUR eller USD)
+fun convert-NOK(nok-amount :: Number, currency :: String) -> Number:
+  doc: "Convert NOK to either USD or EUR based on the input currency"
+  if currency == "USD":
+    nok-to-USD(nok-amount) #Kaller nok-USD hvis valutaen er USD
+  else if currency == "EUR":
+    nok-to-EUR(nok-amount) #Kaller nok-EUR hvis valutaen er EUR
+  end
+end
