@@ -1,0 +1,23 @@
+# Kontrakt circle(Number, String, String) -> image
+circle-red = circle(30, "outline", "red")
+circle-blue = circle(30, "outline", "blue")
+circle-yellow = circle(30, "outline", "yellow")
+circle-black = circle(30, "outline", "black")
+circle-green = circle(30, "outline", "green")
+
+#Tom bakgrunn:
+background = empty-scene(400, 200)
+
+#Legger til sirkler på den tomme bakgrunnen:
+scene0 = put-image(circle-red, 90, 150, background)
+scene1 = put-image(circle-blue, 130, 120, scene0)
+scene2 = put-image(circle-yellow, 160, 150, scene1)
+scene3 = put-image(circle-black, 200, 120, scene2)
+scene4 = put-image(circle-green, 240, 150, scene3)
+
+#legger til svarte sirkler på bakgrunnen
+scene5 = put-image(circle-black, 90, 150, background)
+scene6 = put-image(circle-black, 130, 120, scene5)
+scene7 = put-image(circle-black, 160, 150, scene6)
+scene8 = put-image(circle-black, 200, 120, scene7)
+scene9 = put-image(circle-black, 230, 150, scene8)
